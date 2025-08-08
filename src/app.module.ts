@@ -12,6 +12,7 @@ import { PromocoesModule } from './promocoes/promocoes.module';
 import { DepoimentosModule } from './depoimentos/depoimentos.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { PagamentoController } from './pagamento/pagamento.controller';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { UsersModule } from './users/users.module';
     UsersModule,
   ],
   providers: [AppService],
+  controllers: [PagamentoController],
 })
 export class AppModule {
   constructor(private dataSource: DataSource) {}
