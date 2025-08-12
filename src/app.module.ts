@@ -12,7 +12,8 @@ import { PromocoesModule } from './promocoes/promocoes.module';
 import { DepoimentosModule } from './depoimentos/depoimentos.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
-import { PagamentoController } from './pagamento/pagamento.controller';
+import { PagamentoModule } from './pagamento/pagamento.module';
+import { ReservaController } from './reserva/reserva.controller';
 
 @Module({
   imports: [
@@ -28,9 +29,10 @@ import { PagamentoController } from './pagamento/pagamento.controller';
     DepoimentosModule,
     AuthModule,
     UsersModule,
+    PagamentoModule
   ],
   providers: [AppService],
-  controllers: [PagamentoController],
+  controllers: [ReservaController]
 })
 export class AppModule {
   constructor(private dataSource: DataSource) {}
