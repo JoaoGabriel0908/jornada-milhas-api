@@ -1,9 +1,11 @@
 import { Estado } from 'src/estados/entities/estado.entity';
+import { Reserva } from 'src/reserva/entities/reserva.entity';
 import {
   Column,
   Entity,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
@@ -28,7 +30,7 @@ export class User {
 
   @Column()
   cidade: string;
-  @ManyToOne(() => Estado)
-  @JoinColumn()
-  estado: Estado;
+
+  @OneToMany(() => Reserva, (reserva) => reserva.user)
+  reservas: Reserva[];
 }

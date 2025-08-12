@@ -14,6 +14,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { PagamentoModule } from './pagamento/pagamento.module';
 import { ReservaController } from './reserva/reserva.controller';
+import { ReservaModule } from './reserva/reserva.module';
 
 @Module({
   imports: [
@@ -29,7 +30,8 @@ import { ReservaController } from './reserva/reserva.controller';
     DepoimentosModule,
     AuthModule,
     UsersModule,
-    PagamentoModule
+    PagamentoModule,
+    ReservaModule
   ],
   providers: [AppService],
   controllers: [ReservaController]
